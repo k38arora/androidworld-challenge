@@ -1,0 +1,30 @@
+{
+  "task": {
+    "id": "19f7bb22-9a51-4bf0-9166-03d870fe19d0",
+    "name": "Clear App Data",
+    "type": "maintenance",
+    "description": "Clear data for a specific application",
+    "parameters": {
+      "package_name": "com.android.settings",
+      "data_types": [
+        "cache",
+        "user_data"
+      ]
+    },
+    "expected_outcome": "App data should be cleared successfully",
+    "priority": 1,
+    "timeout": 97,
+    "retry_count": 2
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 97,
+    "retry_count": 2
+  },
+  "output": {
+    "log_file": "task_19f7bb22-9a51-4bf0-9166-03d870fe19d0.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_19f7bb22-9a51-4bf0-9166-03d870fe19d0_metrics.json"
+  }
+}

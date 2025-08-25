@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "59916b62-e51a-4233-aab8-bd47da3cc989",
+    "name": "Install App",
+    "type": "installation",
+    "description": "Install an application from APK file",
+    "parameters": {
+      "apk_path": "/sdcard/test_app.apk",
+      "package_name": "com.example.testapp"
+    },
+    "expected_outcome": "App should install successfully",
+    "priority": 4,
+    "timeout": 55,
+    "retry_count": 2
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 55,
+    "retry_count": 2
+  },
+  "output": {
+    "log_file": "task_59916b62-e51a-4233-aab8-bd47da3cc989.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_59916b62-e51a-4233-aab8-bd47da3cc989_metrics.json"
+  }
+}

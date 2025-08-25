@@ -1,0 +1,244 @@
+{
+    "metrics": {
+        "task_success_rate": {
+            "passes": 146,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.90": false
+            },
+            "value": 1
+        },
+        "http_req_connecting": {
+            "avg": 0.19228782707622322,
+            "min": 0.067,
+            "med": 0.157,
+            "max": 3.081,
+            "p(90)": 0.297,
+            "p(95)": 0.34219999999999995
+        },
+        "http_req_waiting": {
+            "avg": 22.417361774744034,
+            "min": 0.123,
+            "med": 0.349,
+            "max": 208.707,
+            "p(90)": 105.39659999999999,
+            "p(95)": 105.70129999999999
+        },
+        "task_duration": {
+            "min": 101,
+            "med": 106,
+            "max": 209,
+            "p(90)": 107,
+            "p(95)": 107.75,
+            "avg": 105.6917808219178
+        },
+        "iterations": {
+            "count": 141,
+            "rate": 1.6642963820545553
+        },
+        "iteration_duration": {
+            "max": 3187.947834,
+            "p(90)": 2932.304541,
+            "p(95)": 3089.073125,
+            "avg": 2172.1299122269493,
+            "min": 1130.084541,
+            "med": 2162.782083
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 879,
+            "thresholds": {
+                "rate<0.05": false
+            },
+            "value": 0
+        },
+        "concurrent_users": {
+            "rate": 1.746921025135278,
+            "count": 148
+        },
+        "vus_max": {
+            "min": 100,
+            "max": 100,
+            "value": 100
+        },
+        "data_sent": {
+            "count": 95472,
+            "rate": 1126.9057034575355
+        },
+        "data_received": {
+            "count": 303261,
+            "rate": 3579.5474121861453
+        },
+        "http_reqs": {
+            "count": 879,
+            "rate": 10.375294466850738
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 105.4648,
+            "p(95)": 105.8198,
+            "avg": 22.566281001137636,
+            "min": 0.155,
+            "med": 0.48,
+            "max": 208.797
+        },
+        "http_req_blocked": {
+            "avg": 0.25609556313993215,
+            "min": 0.089,
+            "med": 0.211,
+            "max": 5.155,
+            "p(90)": 0.399,
+            "p(95)": 0.4780999999999999
+        },
+        "http_req_tls_handshaking": {
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0
+        },
+        "http_req_sending": {
+            "max": 2.047,
+            "p(90)": 0.08,
+            "p(95)": 0.10109999999999997,
+            "avg": 0.05021387940841863,
+            "min": 0.01,
+            "med": 0.036
+        },
+        "vus": {
+            "value": 7,
+            "min": 1,
+            "max": 7
+        },
+        "http_req_receiving": {
+            "avg": 0.09870534698521054,
+            "min": 0.015,
+            "med": 0.071,
+            "max": 4.898,
+            "p(90)": 0.15820000000000004,
+            "p(95)": 0.21339999999999984
+        },
+        "http_req_duration": {
+            "avg": 22.566281001137636,
+            "min": 0.155,
+            "med": 0.48,
+            "max": 208.797,
+            "p(90)": 105.4648,
+            "p(95)": 105.8198,
+            "thresholds": {
+                "p(99)<10000": false
+            }
+        },
+        "checks": {
+            "passes": 2045,
+            "fails": 3,
+            "value": 0.99853515625
+        }
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "health check passed": {
+                    "id": "9946276c59c8a188fc86e68fa1d60d03",
+                    "passes": 147,
+                    "fails": 0,
+                    "name": "health check passed",
+                    "path": "::health check passed"
+                },
+                "health check response time < 100ms": {
+                    "fails": 2,
+                    "name": "health check response time < 100ms",
+                    "path": "::health check response time < 100ms",
+                    "id": "1ccb574a823e58ef5a40f3884340c7bf",
+                    "passes": 145
+                },
+                "readiness check passed": {
+                    "name": "readiness check passed",
+                    "path": "::readiness check passed",
+                    "id": "7dcdd6ed2a8128ca65555c3e372cefa8",
+                    "passes": 147,
+                    "fails": 0
+                },
+                "readiness check response time < 100ms": {
+                    "passes": 146,
+                    "fails": 1,
+                    "name": "readiness check response time < 100ms",
+                    "path": "::readiness check response time < 100ms",
+                    "id": "072c0d3daf0639fa966f46b8bea91732"
+                },
+                "task request successful": {
+                    "name": "task request successful",
+                    "path": "::task request successful",
+                    "id": "d75aefdb107889c2bdbfe745a9da26bf",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "task response time < 5s": {
+                    "fails": 0,
+                    "name": "task response time < 5s",
+                    "path": "::task response time < 5s",
+                    "id": "e4b70c00b956c353ea03bd26b9d54adb",
+                    "passes": 146
+                },
+                "task response has task_id": {
+                    "name": "task response has task_id",
+                    "path": "::task response has task_id",
+                    "id": "1803b9800a445bf45889fcb19401c455",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "task response has success field": {
+                    "name": "task response has success field",
+                    "path": "::task response has success field",
+                    "id": "84ac6cb8ea297c34dbf50817efdf540f",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "metrics endpoint accessible": {
+                    "name": "metrics endpoint accessible",
+                    "path": "::metrics endpoint accessible",
+                    "id": "e7e6652785cdcc9b7bfe527d26a027de",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "metrics response contains Prometheus format": {
+                    "path": "::metrics response contains Prometheus format",
+                    "id": "9df32c911e336e2e3203bd9195029c5e",
+                    "passes": 146,
+                    "fails": 0,
+                    "name": "metrics response contains Prometheus format"
+                },
+                "status endpoint accessible": {
+                    "name": "status endpoint accessible",
+                    "path": "::status endpoint accessible",
+                    "id": "7b0930f586d52f618190a87608d876d1",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "status response has service name": {
+                    "id": "996f5bea38ae418822ab24c2a94c6e65",
+                    "passes": 146,
+                    "fails": 0,
+                    "name": "status response has service name",
+                    "path": "::status response has service name"
+                },
+                "trace endpoint accessible": {
+                    "name": "trace endpoint accessible",
+                    "path": "::trace endpoint accessible",
+                    "id": "dffe72b55b37d7c4918814558d383d31",
+                    "passes": 146,
+                    "fails": 0
+                },
+                "trace response has service name": {
+                    "fails": 0,
+                    "name": "trace response has service name",
+                    "path": "::trace response has service name",
+                    "id": "332693280501e09663de4ab77711c393",
+                    "passes": 146
+                }
+            },
+        "name": ""
+    }
+}

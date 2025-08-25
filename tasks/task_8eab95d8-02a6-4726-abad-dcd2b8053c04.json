@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "8eab95d8-02a6-4726-abad-dcd2b8053c04",
+    "name": "Navigate to Settings",
+    "type": "navigation",
+    "description": "Navigate to device settings menu",
+    "parameters": {
+      "target_menu": "Settings",
+      "submenu": "System"
+    },
+    "expected_outcome": "Should reach System settings menu",
+    "priority": 5,
+    "timeout": 33,
+    "retry_count": 1
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 33,
+    "retry_count": 1
+  },
+  "output": {
+    "log_file": "task_8eab95d8-02a6-4726-abad-dcd2b8053c04.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_8eab95d8-02a6-4726-abad-dcd2b8053c04_metrics.json"
+  }
+}

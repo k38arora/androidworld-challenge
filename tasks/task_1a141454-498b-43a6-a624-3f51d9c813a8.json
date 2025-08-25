@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "1a141454-498b-43a6-a624-3f51d9c813a8",
+    "name": "Check WiFi Status",
+    "type": "information_gathering",
+    "description": "Check the current WiFi connection status",
+    "parameters": {
+      "check_type": "connection_status",
+      "timeout": 10
+    },
+    "expected_outcome": "Should return WiFi connection information",
+    "priority": 3,
+    "timeout": 97,
+    "retry_count": 2
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 97,
+    "retry_count": 2
+  },
+  "output": {
+    "log_file": "task_1a141454-498b-43a6-a624-3f51d9c813a8.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_1a141454-498b-43a6-a624-3f51d9c813a8_metrics.json"
+  }
+}

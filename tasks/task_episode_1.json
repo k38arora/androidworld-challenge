@@ -1,0 +1,21 @@
+{
+  "task": {
+    "id": "episode_1",
+    "name": "Test Task 1",
+    "type": "information_gathering",
+    "parameters": {
+      "check_type": "general"
+    }
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 60,
+    "retry_count": 0
+  },
+  "output": {
+    "log_file": "task_episode_1.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_episode_1_metrics.json"
+  }
+}

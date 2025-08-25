@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "b597f27a-9f84-4656-a794-040380331e04",
+    "name": "Take Screenshot",
+    "type": "capture",
+    "description": "Capture a screenshot of the current screen",
+    "parameters": {
+      "output_path": "/sdcard/screenshot.png",
+      "format": "PNG"
+    },
+    "expected_outcome": "Screenshot should be saved successfully",
+    "priority": 5,
+    "timeout": 53,
+    "retry_count": 2
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 53,
+    "retry_count": 2
+  },
+  "output": {
+    "log_file": "task_b597f27a-9f84-4656-a794-040380331e04.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_b597f27a-9f84-4656-a794-040380331e04_metrics.json"
+  }
+}

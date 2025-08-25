@@ -1,0 +1,125 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: androidworld-worker
+  namespace: androidworld
+  labels:
+    app: androidworld-worker
+    version: v1.0.0
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: androidworld-worker
+  template:
+    metadata:
+      labels:
+        app: androidworld-worker
+        version: v1.0.0
+    spec:
+      containers:
+        - name: androidworld-worker
+          image: gcr.io/your-project/androidworld:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 5037
+              name: adb
+          envFrom:
+            - configMapRef:
+                name: androidworld-config
+            - secretRef:
+                name: androidworld-secrets
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /workspace/shared
+            - name: logs
+              mountPath: /workspace/logs
+      volumes:
+        - name: shared-storage
+          emptyDir: {}
+        - name: logs
+          emptyDir: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: androidworld-worker-staging
+  namespace: androidworld-staging
+  labels:
+    app: androidworld-worker-staging
+    version: v1.0.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: androidworld-worker-staging
+  template:
+    metadata:
+      labels:
+        app: androidworld-worker-staging
+        version: v1.0.0
+    spec:
+      containers:
+        - name: androidworld-worker-staging
+          image: gcr.io/your-project/androidworld:staging
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 5037
+              name: adb
+          envFrom:
+            - configMapRef:
+                name: androidworld-config-staging
+            - secretRef:
+                name: androidworld-secrets-staging
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "250m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /workspace/shared
+            - name: logs
+              mountPath: /workspace/logs
+      volumes:
+        - name: shared-storage
+          emptyDir: {}
+        - name: logs
+          emptyDir: {}

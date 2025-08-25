@@ -1,0 +1,26 @@
+{
+  "task": {
+    "id": "b45f8e7a-221e-420b-93ed-0412180de7bc",
+    "name": "Uninstall App",
+    "type": "removal",
+    "description": "Uninstall a specific application",
+    "parameters": {
+      "package_name": "com.example.testapp"
+    },
+    "expected_outcome": "App should be removed from device",
+    "priority": 1,
+    "timeout": 44,
+    "retry_count": 0
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 44,
+    "retry_count": 0
+  },
+  "output": {
+    "log_file": "task_b45f8e7a-221e-420b-93ed-0412180de7bc.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_b45f8e7a-221e-420b-93ed-0412180de7bc_metrics.json"
+  }
+}

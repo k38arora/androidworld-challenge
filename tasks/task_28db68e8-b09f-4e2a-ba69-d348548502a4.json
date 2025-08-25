@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "28db68e8-b09f-4e2a-ba69-d348548502a4",
+    "name": "Check Battery Level",
+    "type": "information_gathering",
+    "description": "Get current battery level and status",
+    "parameters": {
+      "check_type": "battery_info",
+      "include_charging": true
+    },
+    "expected_outcome": "Should return battery percentage and charging status",
+    "priority": 4,
+    "timeout": 119,
+    "retry_count": 1
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 119,
+    "retry_count": 1
+  },
+  "output": {
+    "log_file": "task_28db68e8-b09f-4e2a-ba69-d348548502a4.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_28db68e8-b09f-4e2a-ba69-d348548502a4_metrics.json"
+  }
+}

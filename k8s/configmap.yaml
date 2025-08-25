@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: androidworld-config
+  namespace: androidworld
+data:
+  DEFAULT_EPISODES: "50"
+  DEFAULT_AGENT_TYPE: "orchestrator"
+  DEFAULT_OUTPUT_FORMAT: "json"
+  GOOGLE_CLOUD_PROJECT: "your-project-id"
+  GOOGLE_CLOUD_REGION: "us-central1"
+  GOOGLE_CLOUD_ZONE: "us-central1-a"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: androidworld-config-staging
+  namespace: androidworld-staging
+data:
+  DEFAULT_EPISODES: "10"
+  DEFAULT_AGENT_TYPE: "orchestrator"
+  DEFAULT_OUTPUT_FORMAT: "json"
+  GOOGLE_CLOUD_PROJECT: "your-project-id"
+  GOOGLE_CLOUD_REGION: "us-central1"
+  GOOGLE_CLOUD_ZONE: "us-central1-a"

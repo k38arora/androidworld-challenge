@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "ddef3840-5e67-4de3-8d7e-559ee2003c44",
+    "name": "Open App",
+    "type": "navigation",
+    "description": "Open a specific application on the device",
+    "parameters": {
+      "package_name": "com.google.android.apps.maps",
+      "activity_name": "com.android.settings.Settings"
+    },
+    "expected_outcome": "Settings app should open successfully",
+    "priority": 1,
+    "timeout": 54,
+    "retry_count": 1
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 54,
+    "retry_count": 1
+  },
+  "output": {
+    "log_file": "task_ddef3840-5e67-4de3-8d7e-559ee2003c44.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_ddef3840-5e67-4de3-8d7e-559ee2003c44_metrics.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "be12e9dc-3474-4dcc-b60c-12f937bc9786",
+    "name": "Open App",
+    "type": "navigation",
+    "description": "Open a specific application on the device",
+    "parameters": {
+      "package_name": "com.instagram.android",
+      "activity_name": "com.android.settings.Settings"
+    },
+    "expected_outcome": "Settings app should open successfully",
+    "priority": 5,
+    "timeout": 34,
+    "retry_count": 1
+  },
+  "execution": {
+    "emulator_ip": "localhost",
+    "emulator_port": "5555",
+    "timeout": 34,
+    "retry_count": 1
+  },
+  "output": {
+    "log_file": "task_be12e9dc-3474-4dcc-b60c-12f937bc9786.log",
+    "screenshot_dir": "screenshots",
+    "metrics_file": "task_be12e9dc-3474-4dcc-b60c-12f937bc9786_metrics.json"
+  }
+}
